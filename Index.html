@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Itsmefeje — Roblox Developer</title>
+
+<meta name="description" content="Itsmefeje — Roblox developer learning LuaU, game design, and scalable game systems." />
+
+<style>
+:root{
+  --bg:#050508;
+  --fg:#eaeaf0;
+  --muted:#9a9aa6;
+  --card:rgba(255,255,255,0.03);
+  --border:rgba(255,255,255,0.06);
+  --accent:#7c6bff;
+  --max:1000px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+canvas{
+  position:fixed;
+  inset:0;
+  z-index:-2;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.3));
+  z-index:-1;
+}
+
+.wrap{
+  max-width:var(--max);
+  margin:auto;
+  padding:120px 24px 100px;
+}
+
+section{margin-bottom:90px}
+
+h1{
+  font-size:clamp(2.5rem,6vw,3.8rem);
+  letter-spacing:-0.04em;
+  margin:0 0 18px;
+}
+
+h2{
+  font-size:1.25rem;
+  letter-spacing:-0.02em;
+  margin:0 0 14px;
+}
+
+p{
+  max-width:60ch;
+  margin:0 0 14px;
+}
+
+.muted{color:var(--muted)}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:20px;
+}
+
+ul{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:var(--muted);
+}
+
+.contact a{
+  color:var(--fg);
+  text-decoration:underline;
+}
+
+footer{
+  border-top:1px solid var(--border);
+  padding-top:30px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+
+@media(max-width:800px){
+  .grid{grid-template-columns:1fr}
+  .wrap{padding:90px 20px 80px}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="wrap">
+
+<!-- HERO -->
+<section>
+  <h1>Itsmefeje</h1>
+  <p class="muted">
+    Roblox developer learning LuaU, game design, and game development.
+  </p>
+  <p>
+    I focus on understanding systems deeply, building internal prototypes,
+    and learning how scalable mechanics work before releasing public experiences.
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2>About</h2>
+  <p>
+    I am currently studying LuaU and Roblox Studio while experimenting with
+    progression systems, economies, persistence, and offline growth.
+  </p>
+  <p class="muted">
+    My approach emphasizes clean code, maintainable architecture,
+    and systems-first thinking rather than rushed releases.
+  </p>
+</section>
+
+<!-- GOALS -->
+<section>
+  <h2>Goals</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Short-term</strong>
+      <ul>
+        <li>Master LuaU fundamentals</li>
+        <li>Build multiple internal prototypes</li>
+        <li>Release one stable Roblox experience</li>
+      </ul>
+    </div>
+    <div class="card">
+      <strong>Long-term</strong>
+      <ul>
+        <li>Design scalable multiplayer systems</li>
+        <li>Document technical decisions clearly</li>
+        <li>Become a full-stack Roblox developer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+  <p class="muted">
+    Current work consists of internal prototypes and system experiments.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <strong>Offline Growth Prototype</strong>
+      <p class="muted">
+        Testing offline resource accumulation and progression balance.
+      </p>
+    </div>
+    <div class="card">
+      <strong>Inventory & Economy Experiments</strong>
+      <p class="muted">
+        Exploring persistence, item systems, and economy behavior.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT (ONLY LINKS) -->
+<section class="contact">
+  <h2>Contact</h2>
+  <p>GitHub: <a href="https://github.com/itsmefeje" target="_blank">github.com/itsmefeje</a></p>
+  <p>Roblox: <strong>itsmefeje</strong></p>
+  <p>Discord: <strong>itsmefeje</strong></p>
+</section>
+
+<footer>
+  © <span id="year"></span> Itsmefeje
+</footer>
+
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const c=document.getElementById("bg"),x=c.getContext("2d");
+function r(){c.width=innerWidth;c.height=innerHeight}
+addEventListener("resize",r);r();
+let t=0;
+(function d(){
+  t+=0.004;
+  const g=x.createLinearGradient(0,0,c.width,c.height);
+  g.addColorStop(0,`hsl(${220+Math.sin(t)*12},60%,18%)`);
+  g.addColorStop(1,`hsl(${260+Math.cos(t)*10},60%,14%)`);
+  x.fillStyle=g;x.fillRect(0,0,c.width,c.height);
+  requestAnimationFrame(d);
+})();
+</script>
+
+</body>
+</html>

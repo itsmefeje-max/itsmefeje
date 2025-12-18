@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Itsmefeje — Roblox Developer</title>
+  <meta name="description" content="Itsmefeje — Roblox developer in the learning phase of LuaU, game design, and game development. Learning portfolio, goals and contact." />
+  <meta property="og:title" content="Itsmefeje — Roblox Developer" />
+  <meta property="og:description" content="Learning LuaU, game design and scalable game mechanics — portfolio and learning log." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Expose reduced-motion preference early for main.js
+    window.__prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- Background canvas (pure canvas, performant) -->
+  <canvas id="background" aria-hidden="true"></canvas>
+
+  <!-- Page -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#hero" aria-label="Go to top">Itsmefeje</a>
+      </div>
+
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="#about" data-link="about">About</a>
+        <a href="#goals" data-link="goals">Goals</a>
+        <a href="#projects" data-link="projects">Projects</a>
+        <a href="#contact" data-link="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section id="hero" class="hero container">
+      <div class="hero-inner reveal">
+        <h1 class="display">Itsmefeje</h1>
+        <p class="lede muted">
+          Roblox developer — learning LuaU, game design & game development.  
+          I build systems-first prototypes, document how mechanics connect, and grow toward shipping scalable experiences.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-inner grid reveal">
+        <div class="col">
+          <h2>About</h2>
+          <p>I’m studying LuaU and Roblox Studio while building small prototypes that prove systems before public release. I value clarity, readable code and modular design that scales with many players.</p>
+          <p class="muted">Focus: clean code, maintainability, and learning the reasoning behind systems — not copy-paste solutions.</p>
+        </div>
+
+        <aside class="col side">
+          <h3>Quick facts</h3>
+          <ul class="facts">
+            <li><strong>Role:</strong> Roblox developer (learning)</li>
+            <li><strong>Location:</strong> Philippines</li>
+            <li><strong>Handle:</strong> <code>itsmefeje</code> (Roblox & Discord)</li>
+            <li><strong>Status:</strong> Prototyping internal systems</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="goals" class="section container">
+      <div class="section-inner reveal">
+        <h2>Goals</h2>
+        <div class="goals-grid">
+          <div class="goal-card">
+            <h4>Short-term</h4>
+            <ul>
+              <li>Master LuaU fundamentals & scripting patterns</li>
+              <li>Ship three internal prototypes</li>
+              <li>Publish a small, stable Roblox experience</li>
+            </ul>
+          </div>
+
+          <div class="goal-card">
+            <h4>Long-term</h4>
+            <ul>
+              <li>Design multiplayer experiences with scalable systems</li>
+              <li>Document case studies and technical decisions</li>
+              <li>Become a full-stack Roblox developer</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-inner reveal">
+        <h2>Projects (Work in progress)</h2>
+        <p class="muted">Public projects will appear here when ready. For now I maintain prototypes and learning notes.</p>
+
+        <div class="projects-grid">
+          <!-- Example card: replace with real project when available -->
+          <article class="project-card">
+            <div class="project-meta">
+              <strong>Offline Growth Prototype</strong>
+              <span class="small muted">prototype</span>
+            </div>
+            <p class="muted">Testing offline resource accumulation and balancing systems. Not public yet — internal demo.</p>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">
+              <strong>Inventory & Economy Tests</strong>
+              <span class="small muted">internal</span>
+            </div>
+            <p class="muted">Exploring inventory persistence and simple micro-economy interactions under load.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <div class="section-inner reveal">
+        <h2>Contact</h2>
+        <p>If you'd like to reach out, you can find me here:</p>
+        <ul class="contact-list">
+          <li>GitHub: <a href="https://github.com/itsmefeje" target="_blank" rel="noopener">github.com/itsmefeje</a></li>
+          <li>Roblox: <strong>itsmefeje</strong> (profile/search)</li>
+          <li>Discord: <strong>itsmefeje</strong></li>
+          <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a> (replace)</li>
+        </ul>
+        <p class="muted">I respond when available. For project inquiries, include a short message and availability.</p>
+      </div>
+    </section>
+
+    <footer class="site-footer container">
+      <div class="footer-inner">
+        <small>© <span id="year"></span> Itsmefeje — Built with care</small>
+        <nav class="footer-nav" aria-label="Footer links">
+          <a href="#about">About</a>
+          <a href="#goals">Goals</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
